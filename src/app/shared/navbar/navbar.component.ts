@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit{
     private toggleButton;
     private sidebarVisible: boolean;
     private notificationArray=[];
-    private showArray=[];
+     showArray=[];
     unreadCount = 0;
 
     @ViewChild("navbar-cmp") button;
