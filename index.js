@@ -1,3 +1,4 @@
+const express = require('express');
 var app = require("express")();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
@@ -10,7 +11,7 @@ var nodemailer = require('nodemailer');
 var configuration = require("./configuration.js");
 var message = require("./message.js");
 
-app.use(express.static(__dirname + '/dist/demo-deploy'));
+app.use(express.static(__dirname + '/dist/'));
 app.get('/*', (req, res) => res.sendFile(path.join(__dirname)));
 
 var config = {                                          //Setting up database
