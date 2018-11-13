@@ -10,6 +10,7 @@ var port = process.env.PORT || 3000;
 var nodemailer = require('nodemailer');
 var configuration = require("./configuration.js");
 var message = require("./message.js");
+var path = require('path');
 
 app.use(express.static(__dirname + '/dist/'));
 app.get('/*', (req, res) => res.sendFile(path.join(__dirname)));
@@ -298,23 +299,23 @@ readBin.on("value", function(snapshot) {
 
 
 //API that stores the users in the notificationUser that will be passed by the admin
- app.post("/api/storeUser", function(req,res){
-   var emails = req.body;
-   var email;
-   var keys = Object.keys(emails);
-   var count = 0;
-   for(var i = 0; i < keys.length; i++)
-   {
-     var k =  keys[i];
-     email = emails[k];
-     notificationUsers.push(email);       //Pushing emails who are subscribed to notificationUser
-     if(count == 0)
-     {
-       res.status(200).json({message: "Success: User have been stored.", result: true})
-     }
-     count++;
-   }
- });
+//  app.post("/api/storeUser", function(req,res){
+//    var emails = req.body;
+//    var email;
+//    var keys = Object.keys(emails);
+//    var count = 0;
+//    for(var i = 0; i < keys.length; i++)
+//    {
+//      var k =  keys[i];
+//      email = emails[k];
+//      notificationUsers.push(email);       //Pushing emails who are subscribed to notificationUser
+//      if(count == 0)
+//      {
+//        res.status(200).json({message: "Success: User have been stored.", result: true})
+//      }
+//      count++;
+//    }
+//  });
 
  //Method for sending email and sending notification to the user (Real time)
 
