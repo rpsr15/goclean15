@@ -21,13 +21,13 @@ export class DashboardComponent implements OnInit {
      map: Map;
      ioConnection: any;
      zoom = 13;
-     iconGreenBloop = 'src/assets/img/markers/green-bloop.png';
-     iconOragneBloop = 'src/assets/img/markers/orange-bloop.png';
-     iconRedBloop = 'src/assets/img/markers/red-bloop.png';
-     iconGreen = 'src/assets/img/markers/final-marker-green.png';
-     iconOrange = 'src/assets/img/markers/final-marker-orange.png';
-     markerShadow = 'src/assets/img/marker-shadow.png';
-     iconRed = 'src/assets/img/markers/final-marker-red.png';
+     iconGreenBloop = 'assets/img/markers/green-bloop.png';
+     iconOragneBloop = 'assets/img/markers/orange-bloop.png';
+     iconRedBloop = 'assets/img/markers/red-bloop.png';
+     iconGreen = 'assets/img/markers/final-marker-green.png';
+     iconOrange = 'assets/img/markers/final-marker-orange.png';
+     markerShadow = 'assets/img/marker-shadow.png';
+     iconRed = 'assets/img/markers/final-marker-red.png';
         // iconOrange =
      areaList = [];
      locations: String[];
