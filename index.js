@@ -55,7 +55,12 @@ var config = {                                          //Setting up database
    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
    next();
  });
- io.origins('*:*');
+ io.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+ //io.origins('*:*');
 
 
  app.use(morgan('dev'));                                         // log every request to the console
