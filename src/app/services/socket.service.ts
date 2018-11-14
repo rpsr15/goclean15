@@ -3,7 +3,7 @@ import { Observable, Observer } from 'rxjs';
 
 import * as socketIo from 'socket.io-client';
 
-const SERVER_URL = 'http://localhost:3001';
+const SERVER_URL = 'https://goclean1508.herokuapp.com:3001';
 
 @Injectable()
 export class SocketService {
